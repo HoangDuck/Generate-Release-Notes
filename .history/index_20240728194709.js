@@ -6,11 +6,9 @@ try {
   // Get inputs
   const token = core.getInput('token');
   const tag = core.getInput('tag');
-  const owner = core.getInput('owner');
-  const repo = core.getInput('repo');
   
   // Define the API URL and payload
-  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/releases`;
+  const apiUrl = 'https://api.github.com/repos/HoangDuck/ci_server_service_ex/releases';
   const payload = {
     tag_name: tag,
     generate_release_notes: true
