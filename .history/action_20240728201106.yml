@@ -14,8 +14,8 @@ inputs:
     description: "Name of the repository"
     required: true
 outputs:
-  release: # id of output
-    description: "Release result"
+  time: # id of output
+    description: "The time we greeted you"
 runs:
   using: "node20"
   main: "index.js"
