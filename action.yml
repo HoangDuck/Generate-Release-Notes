@@ -1,5 +1,8 @@
 name: "Release Notes by Github's Rest APIs"
 description: "Generate release notes by tag via Github's Rest APIs"
+branding:
+  icon: check-square
+  color: purple
 inputs:
   token:
     description: "GitHub token"
