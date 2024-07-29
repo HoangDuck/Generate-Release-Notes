@@ -1,23 +1,42 @@
-# Hello world javascript action
+# Generate release notes action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action will generate a release notes via Github's REST APIs
+The api I use in this actions [here](https://docs.github.com/en/rest/releases/releases?apiVersion=2022-11-28).
 
 ## Inputs
 
-### `who-to-greet`
+### `token`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** The access token of your Github account.
+### `tag`
 
-## Outputs
+**Required** The tag version you want to use for creating release notes.
+### `owner`
 
-### `time`
+**Required** The owner of the repository.
+### `repo`
 
-The time we greeted you.
-
+**Required** The name of the repository.
+<p class="callout danger">You have to give permission.contents.write to generate release notes successfully</p>
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
-with:
-  who-to-greet: "Mona the Octocat"
+on:
+  push:
+    tags:
+      - v1.*
+name: Build and run custom action generate release notes
+jobs:
+  run-action:
+    name: Run action generate release notes
+    runs-on: [self-hosted, macOS] (Whatever host you want)
+    permissions:
+      contents: write
+    steps:
+      - uses: HoangDuck/Generate-Release-Notes@v1.5
+        with:
+          token: <Your Github's access token>
+          tag: <Your tag name>
+          owner: <The owner's name of the repository>
+          repo: <The repository's name>
 ```
