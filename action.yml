@@ -1,4 +1,4 @@
-name: "Generate Release Notes"
+name: "Release Notes by Github's Rest APIs"
 description: "Generate release notes by tag via Github's Rest APIs"
 inputs:
   token:
