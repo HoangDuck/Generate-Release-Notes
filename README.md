@@ -20,7 +20,8 @@ The api I use in this actions [here](https://docs.github.com/en/rest/releases/re
 
 > [!NOTE]
 > You have to give permission.contents.write to generate release notes successfully
-##Example usage
+
+## Example usage
 
 ```yaml
 on:
