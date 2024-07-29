@@ -17,8 +17,10 @@ The api I use in this actions [here](https://docs.github.com/en/rest/releases/re
 ### `repo`
 
 **Required** The name of the repository.
-<p class="callout danger">You have to give permission.contents.write to generate release notes successfully</p>
-## Example usage
+
+> [!NOTE]
+> You have to give permission.contents.write to generate release notes successfully
+##Example usage
 
 ```yaml
 on:
