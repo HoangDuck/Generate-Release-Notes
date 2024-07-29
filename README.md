@@ -20,6 +20,7 @@ The api I use in this actions [here](https://docs.github.com/en/rest/releases/re
 
 > [!NOTE]
 > You have to give permission.contents.write to generate release notes successfully
+
 > [!NOTE]
 > You have to store, get token from your Github secret environment for security
 
